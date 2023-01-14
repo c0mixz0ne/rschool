@@ -1,0 +1,49 @@
+// Colors
+$white: rgba(255, 255, 255, 1);
+$purple: #8D5CF6;
+$purpleOpacity: #8d5cf665;
+$orange:rgba(255, 123, 82, 1);
+$darkblue:#26335D;
+$red :#E74040;
+$dangerRed:rgba(231, 64, 64, 1);
+$gray:#737373;
+$darkBgColor:rgba(38, 51, 93, 1);
+$starColor:rgba(255, 206, 49, 1);
+$textColor:rgba(37, 43, 66, 1);
+$secondTextColor:rgba(115, 115, 115, 1);
+$mutedColor:rgba(189, 189, 189, 1) ;
+$borderColor:rgba(230, 230, 230, 1);
+$footerColor:#FAFAFA;
+
+
+//Settings
+$transition: .5s ease;
+
+//BreakPoints
+$xxl:1200px;
+$xl:992px;
+$md:768px;
+$sm:576px;
+
+//RetinaMedia
+$pixelRatio:2;
+$minResDpi:192dpi;
+$minResDppx:2dppx;
+
+//Focus
+// @mixin focus{
+//     outline:$navBlue dotted thick;
+// }
+
+//Animations
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
