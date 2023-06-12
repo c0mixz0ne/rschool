@@ -1,17 +1,17 @@
 header.header
     .logo
-        a(href="").logo__item Rony School
+        a(href="#main-section").logo__item Rony School
     nav.navigation
         ul.navigation__list
             li.navigation__item
-                a(href="").navigation__link О Нас
+                a(href="#about").navigation__link О Нас
             li.navigation__item
-                a(href="").navigation__link Программа
+                a(href="#program").navigation__link Программа
             li.navigation__item
-                a(href="").navigation__link Обучение
+                a(href="#education").navigation__link Обучение
             li.navigation__item
                 button.main-button Запись
-section.section.first-section
+section.section.first-section#main-section
     .container
         h1.main-text
             | Математика.
@@ -42,7 +42,7 @@ section.section.second-section
                 img.small-cards__image(src=require("../images/icon2.svg"), alt="Icon")
                 .small-cards__title Books Liberary
                 .small-cards__text The gradual  accumulation of information about
-section.section.third-section
+section.section.third-section#program
     .container
         .title-name
             .title-name__subtitle Courses
@@ -171,8 +171,8 @@ section.section.third-section
                         span.big-card__price_orange $6.48
                     button.big-card__learn-more Learn More
                         i.fa-solid.fa-chevron-right(aria-hidden='true')
-section.section.fourth-section
-    .container.container_flex
+section.section.fourth-section#about
+    .container.container_flex.fourth-section__container
         .graph
             img.graph__image(src=require("../images/children.png"), alt="Children")
         .graph-text
@@ -181,8 +181,8 @@ section.section.fourth-section
             .graph-text__content Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
             a.graph-text__link(href="") Learn More
                 i.fa-solid.fa-chevron-right(aria-hidden='true')
-section.section.fifth-section
-    .container.container_flex
+section.section.fifth-section#education
+    .container.container_flex.fifth-section__container
         .graph-text
             .graph-text__line
             .graph-text__title Every Client Matters
@@ -324,7 +324,7 @@ section.section.ninth-section
                 i.fa-solid.fa-envelope(aria-hidden='true')
                 | debra.holt@example.com
 footer.footer
-   .container.container_flex.container_space-between
+   .container.container_flex.footer__container
         .author
             | Made With Love By
             a.author__link(href="")  ComixZone

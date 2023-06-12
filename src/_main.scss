@@ -1,5 +1,4 @@
-@import '_constants',
-        '_media';
+@import '_constants';
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
@@ -7,6 +6,9 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 body{
     font-family: Nunito Sans;
+}
+*{
+    box-sizing: border-box;
 }
 //Header
 .header{
@@ -61,17 +63,22 @@ body{
 }
 .main-button{
     background-color: $orange;
-    border:none;
+    border: 1px solid $orange;
     color:$white;
+    transition: $transition;
     padding:10px 20px;
     border-radius: 5px;
     cursor:pointer;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     font-size: 16px;
     &_big{
-        font-size: 30px;
+        font-size: 26px;
         margin: 20px auto;
         display: block;
-
+    }
+    &:hover{
+        background: none;
+        border:1px solid $white;
     }
 }
 //Section
@@ -83,11 +90,9 @@ body{
     width:100%;
     display: block;
     margin: 0 auto;
+    padding:0 10px;
     &_flex{
         display: flex;
-    }
-    &_space-between{
-        justify-content: space-between;
     }
     &_contact{
         display: flex;
@@ -100,6 +105,7 @@ body{
     justify-content: center;
     align-items: center;
     height:100vh;
+    // 100%?
 }
 .main-text{
     color: $white;
@@ -153,6 +159,9 @@ body{
         &:nth-child(2n){
             margin-top: 50px;
         }
+        &:not(:last-child){
+            margin-right: 10px;
+        }
     }
     &__card_purple &__text{
         color: $white;
@@ -204,7 +213,10 @@ body{
         background: url(../src/images/prod1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        }
     }
+    &:not(:last-child){
+        margin-right: 10px;
     }
     &__red-title{
         background: $dangerRed;
@@ -401,8 +413,11 @@ body{
         background:$white;
         display: flex;
         flex-direction: column;
-       align-items: center;
+        align-items: center;
         padding: 25px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
     }
     &__avatar{
         border-radius: 50%;
@@ -448,6 +463,9 @@ body{
         max-width: 238px;
         width:100%;
         border-radius: 20px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
     }
     &__avatar{
         border-top-left-radius: 20px;
@@ -585,6 +603,9 @@ body{
     display: flex;
     justify-content: space-between;
     padding:25px 0;
+    &__container{
+        justify-content: space-between;
+    }
 }
 .social {
     display: flex;
@@ -604,3 +625,5 @@ body{
         color:$purple;
     }
 }
+
+@import '_media';

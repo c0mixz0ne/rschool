@@ -1,1 +1,119 @@
-// @import '';
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+    .big-cards{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .big-card{
+        width: calc(50% - 10px);
+        max-width: 100%;
+        margin-bottom: 10px;
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+        &__list-buttons{
+            max-width: 238px;
+            margin:0 auto;
+        }
+        &__learn-more{
+            margin-left: auto;
+        }
+    }
+    .footer{
+        &__container{
+           flex-direction: column;
+           align-items: center;
+        }
+    }
+    .social{
+        margin-top: 20px;
+    }
+    .small-cards{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__card{
+            width: 100%;
+            max-width: calc(50% - 10px);
+            margin:0;
+            &:not(:last-child){
+                margin-right: 0;
+            }
+            &:nth-child(2n) {
+                margin-top: 0;
+            }
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width: $md) {
+    .navigation{
+        display: none;
+    }
+    .small-cards{
+        &__card{
+            &:not(:last-child){
+                margin-right: 0;
+            }
+            &:nth-child(2n) {
+                margin-top: 0;
+            }
+            padding: 10px;
+        }
+    }
+
+    .peoples{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__item{
+            margin-bottom: 10px;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+    .container_contact{
+        flex-wrap: wrap;
+    }
+
+}
+@media screen and (max-width: $sm) {
+    .reviews{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__item{
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            margin-bottom: 10px;
+        }
+    }
+    .main-text{
+        font-size: 40px;
+        line-height: 36px;
+    }
+    .big-card{
+        width: 100%;
+    }
+    .contact-container{
+        width:50%;
+    }
+    .fourth-section, .fifth-section{
+        &__container{
+            flex-direction: column;
+        }
+    }
+    .graph-text{
+        width: 100%;
+        &__link{
+            margin-left: auto;
+        }
+    }
+    .graph{
+        width: 100%;
+        &__container{
+            margin-top: 20px;
+        }
+    }
+
+}
