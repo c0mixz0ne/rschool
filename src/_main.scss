@@ -16,30 +16,44 @@ body{
     position: fixed;
     top:0;
     width: 100%;
-    background-color: $purple;
+    // background-color: $bgColor;
+    background-color: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
     // border-bottom: 1px solid $white;
     z-index: 10;
+    height:73px;
+    transition: $transition;
+    &__scroll{
+        background-color: rgba(255, 255, 255, .8);
+    }
 }
+
 .logo{
     font-size: 70px;
     font-family: Vasek;
+    transition: $transition;
     &__item{
         text-decoration: none;
         transition: $transition;
         color: inherit;
         position: relative;
-        &:after{
-            content: ')';
-            position: absolute;
-            font-size: 40px;
-            color: $orange;
-            top: 37px;
-            transform: rotate(73deg);
-            right: 10px;
+        & img{
+            width:50px;
         }
+        // &:after{
+        //     content: ')';
+        //     position: absolute;
+        //     font-size: 40px;
+        //     color: $orange;
+        //     top: 37px;
+        //     transform: rotate(73deg);
+        //     right: 10px;
+        // }
+    }
+    &__scroll{
+        filter:invert(1);
     }
 }
 .navigation{
@@ -56,6 +70,9 @@ body{
         text-decoration: none;
         color: inherit;
         transition: $transition;
+        &_scroll{
+            color:#000;
+        }
         &:hover{
             color: $orange;
         }
@@ -67,7 +84,7 @@ body{
     color:$white;
     transition: $transition;
     padding:10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor:pointer;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     font-size: 16px;
@@ -100,7 +117,8 @@ body{
     }
 }
 .first-section{
-    background-color: $purple;
+    background-color: $bgColor;
+    background-image: url(../src/images/bg1.svg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +149,7 @@ body{
 
 .title-name{
     &__subtitle{
-        color:$purple;
+        color:$bgColor;
     }
     &__title{
         font-size: 40px;
@@ -153,7 +171,7 @@ body{
         padding:35px 40px;
         height: 300px;
         &_purple{
-            background-color: $purple;
+            background-color: $bgColor;
             color:$white;
         }
         &:nth-child(2n){
@@ -248,7 +266,7 @@ body{
         cursor: pointer;
         transition: $transition;
         &:hover{
-            background: $purple;
+            background: $bgColor;
             color: $white;
         }
     }
@@ -264,7 +282,7 @@ body{
         margin-bottom: 10px;
     }
     &__bottom-text{
-        color:$purple;
+        color:$bgColor;
         font-weight: bold;
     }
     &__bottom-rating {
@@ -310,11 +328,11 @@ body{
         }
     }
     &__learn-more{
-        color:$purple;
+        color:$bgColor;
         font-weight: bold;
         padding: 10px 20px;
         border-radius: 37px;
-        border:1px solid $purple;
+        border:1px solid $bgColor;
         background-color: $white;
         display: flex;
         align-items: center;
@@ -348,7 +366,7 @@ body{
     &__play-button{
         border:none;
         color:$white;
-        background: $purple;
+        background: $bgColor;
         width:92px;
         height:92px;
         border-radius: 50%;
@@ -384,7 +402,7 @@ body{
     }
     &__link{
         text-decoration: none;
-        color:$purple;
+        color:$bgColor;
         display: flex;
         font-weight: bold;
         align-items: center;
@@ -514,7 +532,7 @@ body{
         text-align: center;
         font-weight: bold;
         font-size: 15px;
-        color:$purple;
+        color:$bgColor;
         margin-bottom: 10px;
     }
     &__text{
@@ -552,7 +570,7 @@ body{
     }
     &__button{
         color:$white;
-        background: $purple;
+        background: $bgColor;
         border:none;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -580,7 +598,7 @@ body{
             margin-bottom: 10px;
         }
         &:hover{
-            color:$purple;
+            color:$bgColor;
         }
         &_data{
             cursor: auto;
@@ -622,7 +640,7 @@ body{
 .author{
     &__link{
         text-decoration: none;
-        color:$purple;
+        color:$bgColor;
     }
 }
 
